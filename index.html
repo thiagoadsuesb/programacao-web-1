@@ -1,0 +1,296 @@
+<!--
+=========================================================
+UNIVERSIDADE ESTADUAL DO SUDOESTE DA BAHIA (UESB)
+CENTRO DE EDUCAÇÃO ABERTA E A DISTÂNCIA (CEAD)
+CURSO: ANÁLISE E DESENVOLVIMENTO DE SISTEMAS
+DISCIPLINA: Programação Web I
+PROFESSOR: Lucas Santos de Oliveira
+ALUNO: Thiago Ferreira Prates Neves
+=========================================================
+
+ATIVIDADE: De artigo para HTML
+
+ARTIGO:
+Assistente Virtual Inteligente para Instituições Educacionais:
+Aplicação da Técnica RAG no IFBot
+
+OBJETIVO:
+Criar uma página HTML imitando a formatação do artigo em PDF,
+utilizando somente as tags vistas nos slides 1, 2 e 3.
+
+=========================================================
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>IFBot - Artigo em HTML</title>
+</head>
+
+<body>
+
+    <h1>Assistente Virtual Inteligente para Instituições Educacionais: Aplicação da Técnica RAG no IFBot</h1>
+
+    <p>
+        Wesley Folly Volotão de Souza<sup>1</sup>,
+        Ianne Lima Nogueira<sup>1</sup>,
+        Anderson Veiga de Souza<sup>1</sup>
+    </p>
+
+    <p>
+        <sup>1</sup>Instituto Federal de Educação, Ciência e Tecnologia Fluminense – campus Bom Jesus do Itabapoana (IFF)<br>
+        CEP 28360-000 – Bom Jesus do Itabapoana – RJ – Brasil<br>
+        wesley.souza@iff.edu.br, ianne.nogueira@iff.edu.br, anderson.silva@iff.edu.br
+    </p>
+
+    <h2>Abstract</h2>
+
+    <p>
+        <b>Abstract.</b> This paper presents the IFBot, an artificial intelligence chatbot developed to optimize access to
+        institutional information in an educational institution. The solution uses the RAG
+        (Retrieval-Augmented Generation) approach, combining web scraping and analysis of public documents
+        to provide automated and reliable responses. As a preliminary result, the tool is expected to reduce
+        face-to-face service demands, with planned evaluations to measure response accuracy and user satisfaction.
+        Additionally, social and cultural impacts, such as digital inclusion and ethical data handling, are discussed.
+    </p>
+
+    <h2>Índice</h2>
+
+    <ol>
+        <li><a href="#resumo">Resumo</a></li>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#justificativa">Justificativa</a></li>
+        <li><a href="#fundamentacao">Fundamentação Teórica</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#metodologia">Metodologia</a></li>
+        <li><a href="#cronograma">Cronograma</a></li>
+        <li><a href="#resultados">Resultados Esperados</a></li>
+        <li><a href="#conclusao">Conclusão</a></li>
+        <li><a href="#referencias">Referências</a></li>
+    </ol>
+
+    <hr>
+
+    <h2 id="resumo">Resumo</h2>
+
+    <p>
+        <b>Resumo.</b> Este trabalho apresenta o IFBot, um chatbot de inteligência artificial desenvolvido para otimizar
+        o acesso a informações institucionais em uma instituição de ensino. A solução utiliza a abordagem
+        RAG (Retrieval-Augmented Generation), combinando web scraping e análise de documentos públicos
+        para fornecer respostas automatizadas e confiáveis. Como resultado preliminar, espera-se que a ferramenta
+        reduza demandas presenciais, com testes previstos para avaliar a taxa de resposta correta e o grau de
+        satisfação dos usuários. Além disso, são discutidos impactos sociais e culturais, como inclusão digital
+        e tratamento ético de dados sensíveis.
+    </p>
+
+    <p><a href="#topo">Voltar ao início</a></p>
+
+    <h2 id="introducao">1. Introdução</h2>
+
+    <p>
+        O avanço da inteligência artificial (IA) tem proporcionado novas soluções para otimizar o acesso à informação
+        e aprimorar processos administrativos em diversas instituições. No contexto educacional, a aplicação de IA
+        vem sendo explorada para melhorar a eficiência no atendimento a alunos e servidores, automatizando tarefas
+        repetitivas e reduzindo a carga administrativa.
+    </p>
+
+    <p>
+        Diante desse cenário, este trabalho apresenta o IFBot, um assistente virtual inteligente desenvolvido para
+        facilitar o acesso a dados institucionais de forma automatizada e confiável. O IFBot utiliza a abordagem
+        Retrieval-Augmented Generation (RAG), combinando web scraping e análise de documentos públicos para
+        fornecer respostas automatizadas e contextuais.
+    </p>
+
+    <p>
+        Além de otimizar o atendimento administrativo, o IFBot promove a inclusão digital e a democratização da
+        informação, garantindo que alunos e servidores obtenham respostas rápidas e precisas sobre processos
+        institucionais.
+    </p>
+
+    <p><a href="#topo">Voltar ao início</a></p>
+
+    <h2 id="justificativa">2. Justificativa</h2>
+
+    <p>
+        A crescente demanda por informações institucionais e a necessidade de otimização dos serviços administrativos
+        tornam essencial a adoção de soluções tecnológicas que aprimorem esses processos. Atualmente, grande parte
+        das dúvidas e solicitações acadêmicas e administrativas exige a consulta manual a documentos institucionais
+        ou a interação direta com setores específicos.
+    </p>
+
+    <p>
+        A implementação do IFBot se justifica como uma solução inovadora para otimizar o acesso à informação.
+        A abordagem RAG combina recuperação de informações e geração de texto, permitindo que o sistema forneça
+        respostas rápidas, confiáveis e contextualizadas.
+    </p>
+
+    <p>
+        Além disso, o IFBot contribui para a inclusão digital, a modernização da gestão acadêmica e o tratamento
+        ético de dados sensíveis, respeitando princípios de segurança e privacidade.
+    </p>
+
+    <p><a href="#topo">Voltar ao início</a></p>
+
+    <h2 id="fundamentacao">3. Fundamentação Teórica</h2>
+
+    <p>
+        O desenvolvimento de assistentes virtuais baseados em inteligência artificial tem avançado significativamente
+        nos últimos anos, impulsionado pelo aprimoramento de modelos de Processamento de Linguagem Natural (PLN)
+        e por arquiteturas híbridas, como a RAG.
+    </p>
+
+    <p>
+        A abordagem RAG combina recuperação de informações e geração de texto, permitindo que assistentes virtuais
+        acessem dados relevantes e os transformem em respostas contextuais. No caso do IFBot, essa técnica é aplicada
+        para responder dúvidas institucionais a partir de documentos públicos.
+    </p>
+
+    <p>
+        Outro ponto importante é o uso ético de web scraping. Essa técnica permite extrair informações públicas,
+        mas deve ser aplicada de forma responsável, respeitando a privacidade dos usuários e a legislação vigente.
+    </p>
+
+    <p><a href="#topo">Voltar ao início</a></p>
+
+    <h2 id="objetivos">4. Objetivos</h2>
+
+    <p>
+        O objetivo deste trabalho é descrever o desenvolvimento do IFBot, um assistente virtual inteligente baseado
+        em técnicas de PLN e RAG. O IFBot é projetado para fornecer respostas automatizadas e confiáveis a alunos
+        e servidores de uma instituição de ensino.
+    </p>
+
+    <h3>Objetivos específicos</h3>
+
+    <ul>
+        <li>Otimizar o acesso a informações institucionais.</li>
+        <li>Reduzir a sobrecarga administrativa.</li>
+        <li>Utilizar documentos públicos como base de conhecimento.</li>
+        <li>Aplicar técnicas de PLN e RAG.</li>
+        <li>Promover inclusão digital e acessibilidade.</li>
+        <li>Garantir segurança e privacidade dos dados.</li>
+    </ul>
+
+    <p><a href="#topo">Voltar ao início</a></p>
+
+    <h2 id="metodologia">5. Metodologia</h2>
+
+    <p>
+        A metodologia adotada para o desenvolvimento do IFBot segue uma abordagem sistemática, estruturada em etapas
+        que garantem a precisão e eficiência na criação do assistente virtual.
+    </p>
+
+    <h3>5.1. Materiais e Tecnologias</h3>
+
+    <ul>
+        <li>Python para manipulação de dados, treinamento da IA e desenvolvimento da interface.</li>
+        <li>Scrapy e BeautifulSoup para web scraping.</li>
+        <li>NLTK e spaCy para Processamento de Linguagem Natural.</li>
+        <li>Hugging Face Transformers para implementação do modelo RAG.</li>
+        <li>FAISS para indexação vetorial e recuperação de informações.</li>
+        <li>PostgreSQL ou MongoDB para armazenamento dos documentos processados.</li>
+        <li>Web, Telegram e WhatsApp como canais de interação com os usuários.</li>
+    </ul>
+
+    <h3>5.2. Etapas da Metodologia</h3>
+
+    <ol>
+        <li>Coleta de documentos públicos e informações institucionais.</li>
+        <li>Tratamento, limpeza e organização dos dados coletados.</li>
+        <li>Indexação das informações para recuperação eficiente.</li>
+        <li>Implementação do modelo de RAG.</li>
+        <li>Desenvolvimento da interface de interação com o usuário.</li>
+        <li>Testes de precisão, segurança, acessibilidade e satisfação dos usuários.</li>
+    </ol>
+
+    <p><a href="#topo">Voltar ao início</a></p>
+
+    <h2 id="cronograma">6. Cronograma</h2>
+
+    <p>
+        O desenvolvimento do IFBot pode ser organizado em etapas sequenciais, contemplando levantamento de requisitos,
+        coleta de dados, processamento das informações, implementação do modelo, testes e avaliação final.
+    </p>
+
+    <ol>
+        <li>Levantamento das necessidades institucionais.</li>
+        <li>Coleta e análise de documentos públicos.</li>
+        <li>Construção da base de conhecimento.</li>
+        <li>Implementação do assistente virtual.</li>
+        <li>Integração com canais de comunicação.</li>
+        <li>Validação com usuários e ajustes finais.</li>
+    </ol>
+
+    <p><a href="#topo">Voltar ao início</a></p>
+
+    <h2 id="resultados">7. Resultados Esperados</h2>
+
+    <p>
+        Com a implementação do projeto, espera-se que alunos e servidores tenham acesso rápido e preciso às informações
+        institucionais por meio de interações naturais e intuitivas. O modelo de RAG garantirá que as respostas sejam
+        baseadas em documentos oficiais, assegurando confiabilidade e atualização contínua.
+    </p>
+
+    <p>
+        Além de melhorar a eficiência administrativa, o IFBot promoverá benefícios significativos para a comunidade
+        acadêmica. A automação contribuirá para a democratização da informação, a inclusão digital e a redução da
+        sobrecarga de atendimentos presenciais e por e-mail.
+    </p>
+
+    <p>
+        Outro benefício relevante será a acessibilidade para pessoas com deficiência visual, pois o IFBot poderá ser
+        integrado a assistentes de voz e leitores de tela.
+    </p>
+
+    <p><a href="#topo">Voltar ao início</a></p>
+
+    <h2 id="conclusao">8. Conclusão</h2>
+
+    <p>
+        Este trabalho apresentou o desenvolvimento inicial do IFBot, um assistente virtual inteligente baseado em
+        inteligência artificial e na abordagem RAG. O IFBot é projetado para otimizar o acesso a informações
+        institucionais, promovendo inclusão digital e democratização da informação.
+    </p>
+
+    <p>
+        Ao utilizar técnicas de web scraping e análise de documentos públicos, o assistente virtual oferece respostas
+        automatizadas e confiáveis a alunos e servidores. Os resultados esperados incluem o aprimoramento da eficiência
+        administrativa, a redução da sobrecarga de atendimentos presenciais e a promoção da acessibilidade digital.
+    </p>
+
+    <p>
+        Assim, o IFBot se apresenta como uma solução inovadora, escalável e alinhada às necessidades da transformação
+        digital no ambiente educacional.
+    </p>
+
+    <p><a href="#topo">Voltar ao início</a></p>
+
+    <h2 id="referencias">Referências</h2>
+
+    <p>
+        CHEN, L.; CHEN, P.; LIN, Z. Artificial Intelligence in Education: A Review. IEEE Access, 2020.
+    </p>
+
+    <p>
+        LEWIS, P. et al. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. 2020.
+    </p>
+
+    <p>
+        MCAFEE, A.; BRYNJOLFSSON, E. Machine, Platform, Crowd: Harnessing Our Digital Future. 2017.
+    </p>
+
+    <p>
+        RUSSELL, S.; NORVIG, P. Artificial Intelligence: A Modern Approach. 2020.
+    </p>
+
+    <p>
+        WINKLER, R.; SÖLLNER, M. Unleashing the Potential of Chatbots in Education. 2018.
+    </p>
+
+    <p>
+        ZHANG, J.; FØLSTAD, A.; BJØRKLI, C. Organizational Factors Affecting Chatbot Implementation. 2021.
+    </p>
+
+</body>
+</html>
