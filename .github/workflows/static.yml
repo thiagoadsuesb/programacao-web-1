@@ -1,0 +1,51 @@
+# Fluxo simples para publicar conteúdo HTML estático no GitHub Pages
+name: Publicar HTML no GitHub Pages
+
+on:
+  # Executa sempre que houver envio de alterações para a branch principal
+  push:
+    branches: ["main"]
+
+  # Permite executar manualmente pela aba Actions
+  workflow_dispatch:
+
+# Permissões necessárias para publicar no GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Evita publicações simultâneas no GitHub Pages
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Trabalho responsável pela publicação da página
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # Baixa os arquivos do repositório
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      # Configura o GitHub Pages
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      # Envia os arquivos do projeto para publicação
+      - name: Enviar arquivos
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Publica todo o conteúdo da raiz do repositório
+          path: "."
+
+      # Publica a página no GitHub Pages
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
